@@ -15,6 +15,7 @@ public class WMSMD_User_Request implements KvmSerializable
 	private String userName;
 	
 	//fr1
+	//fr2
 	@Override
 	public Object getProperty(int arg0) {
 		return null;

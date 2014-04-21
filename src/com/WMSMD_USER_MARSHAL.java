@@ -12,7 +12,7 @@ import org.xmlpull.v1.XmlSerializer;
 public class WMSMD_USER_MARSHAL implements Marshal
 {
 	
-	private static String DATACONTRACT = "http://jaxws_web.com/";
+	private static String DATACONTRACT = "http://jaxws_web.com/1";
 	private static String CLASSNAME = "WMSMD_User_Request";
 
 	@Override
@@ -29,7 +29,7 @@ public class WMSMD_USER_MARSHAL implements Marshal
 	public void register(SoapSerializationEnvelope envelope)
 	{
 		// TODO Auto-generated method stub
-		envelope.addMapping(DATACONTRACT, CLASSNAME, WMSMD_User_Request.class, this);
+		envelope.addMapping(DATACONTRACT, CLASSNAME, WMSMD_User_Request.WMSMD_USER_CLASS, this);
 	}
 
 	@Override
@@ -37,13 +37,13 @@ public class WMSMD_USER_MARSHAL implements Marshal
 	throws IOException
 	{
 		WMSMD_User_Request user = (WMSMD_User_Request)obj;
-		writer.startTag(DATACONTRACT, "passwd");
+		writer.startTag("", "passwd");
 		writer.text(user.getPasswd());
-		writer.endTag(DATACONTRACT, "passwd");
+		writer.endTag("", "passwd");
 		
-		writer.startTag(DATACONTRACT, "userName");
+		writer.startTag("", "userName");
 		writer.text(user.getUserName());
-		writer.endTag(DATACONTRACT, "userName");
+		writer.endTag("", "userName");
 	}
 
 }

@@ -12,7 +12,7 @@ public class KSoapTester
 	private static final String stringMethodName = "queryStringInfo";
 	private static final String stringMethodName2 = "LoginUserInfo";
 	private static final String stringNamespace = "http://jaxws_web.com/";
-	private static final String stringURL = "http://localhost:8080/jax-ws_web/test";
+	private static final String stringURL = "http://localhost:9090/jax-ws_web/test";
 
 	public static void main( String[] args )
 	{
@@ -22,7 +22,11 @@ public class KSoapTester
 		model.setUserName("kitty");
 		model.setPasswd("123456");
 		PropertyInfo propertyInfo = new PropertyInfo();
-		propertyInfo.setName("in0");
+		
+		//如果@WebParm的targetNamespace和@WebService的targetNamespace不同，需要在这里设置
+//		propertyInfo.setNamespace( WMSMD_User_Request.NAMESPACE );
+		
+		propertyInfo.setName("request");
 		propertyInfo.setValue(model);
 		propertyInfo.setType(WMSMD_User_Request.class);
 		soapObject.addProperty(propertyInfo);
@@ -36,12 +40,15 @@ public class KSoapTester
 		 * 该属性的值就是在第一步创建的SoapObject对象。
 		 */
 		SoapSerializationEnvelope soapSerializationEnvelope = new SoapSerializationEnvelope( SoapEnvelope.VER11);
-		soapSerializationEnvelope.dotNet = true;
+		soapSerializationEnvelope.dotNet = false;
 		soapSerializationEnvelope.encodingStyle = "UTF-8";
+		
+		soapSerializationEnvelope.implicitTypes = true;
+		
 		//set bodyOut
 		soapSerializationEnvelope.setOutputSoapObject(soapObject);
 		//add Mapping
-		soapSerializationEnvelope.addMapping(KSoapTester.stringNamespace,WMSMD_User_Request.WMSMD_USER_CLASS.getSimpleName(),WMSMD_User_Request.class);
+		soapSerializationEnvelope.addMapping( WMSMD_User_Request.NAMESPACE ,WMSMD_User_Request.WMSMD_USER_CLASS.getSimpleName(),WMSMD_User_Request.class);
 		
 		/**
 		 *　关键地方在这里：是否传递复杂数据对象．
@@ -95,6 +102,7 @@ public class KSoapTester
 			}
 			
 			System.out.println( response );
+			System.out.println( (String)response.getResult() );
 			//System.out.println(JSON.toJSONString(response));
 			
 			soapSerializationEnvelope.getInfo(WMSMD_Message_Response.class, null);

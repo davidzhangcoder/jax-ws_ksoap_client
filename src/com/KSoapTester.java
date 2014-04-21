@@ -22,7 +22,7 @@ public class KSoapTester
 		model.setUserName("kitty");
 		model.setPasswd("123456");
 		PropertyInfo propertyInfo = new PropertyInfo();
-		propertyInfo.setName("in0");
+		propertyInfo.setName("LoginUserInfo");
 		propertyInfo.setValue(model);
 		propertyInfo.setType(WMSMD_User_Request.class);
 		soapObject.addProperty(propertyInfo);
@@ -36,7 +36,7 @@ public class KSoapTester
 		 * 该属性的值就是在第一步创建的SoapObject对象。
 		 */
 		SoapSerializationEnvelope soapSerializationEnvelope = new SoapSerializationEnvelope( SoapEnvelope.VER11);
-		soapSerializationEnvelope.dotNet = true;
+		soapSerializationEnvelope.dotNet = false;
 		soapSerializationEnvelope.encodingStyle = "UTF-8";
 		//set bodyOut
 		soapSerializationEnvelope.setOutputSoapObject(soapObject);

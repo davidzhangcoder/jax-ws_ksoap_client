@@ -19,6 +19,7 @@ public class WMSMD_User_Request implements KvmSerializable
 	//fr3
 	//fr4
 	//fr5
+	//fr6
 	@Override
 	public Object getProperty(int arg0) {
 		return null;

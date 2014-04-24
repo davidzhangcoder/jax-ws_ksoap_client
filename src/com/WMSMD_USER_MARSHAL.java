@@ -17,6 +17,7 @@ public class WMSMD_USER_MARSHAL implements Marshal
 
 	
 	//gr1
+	//fr1
 	
 	
 	@Override

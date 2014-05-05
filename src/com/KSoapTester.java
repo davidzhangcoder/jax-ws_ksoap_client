@@ -30,6 +30,7 @@ public class KSoapTester
 //		propertyInfo.setNamespace( WMSMD_User_Request.NAMESPACE );
 		
 		propertyInfo.setName("request");
+
 		propertyInfo.setValue(model);
 		propertyInfo.setType(WMSMD_User_Request.class);
 		soapObject.addProperty(propertyInfo);

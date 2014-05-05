@@ -15,6 +15,11 @@ public class WMSMD_USER_MARSHAL implements Marshal
 	private static String DATACONTRACT = "http://jaxws_web.com/1";
 	private static String CLASSNAME = "WMSMD_User_Request";
 
+	
+	//gr1
+	//fr1
+	
+	
 	@Override
 	public Object readInstance(XmlPullParser parser, String arg1, String arg2,
 			PropertyInfo arg3) throws IOException, XmlPullParserException

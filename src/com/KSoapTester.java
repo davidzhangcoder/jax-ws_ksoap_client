@@ -12,7 +12,10 @@ public class KSoapTester
 	private static final String stringMethodName = "queryStringInfo";
 	private static final String stringMethodName2 = "LoginUserInfo";
 	private static final String stringNamespace = "http://jaxws_web.com/";
-	private static final String stringURL = "http://localhost:9090/jax-ws_web/test";
+//	private static final String stringURL = "http://localhost:9090/jax-ws_web/test";
+	
+	private static final String stringURL = "http://localhost:8080/JAX-WS_SPRING/jaxws-spring";
+
 
 	public static void main( String[] args )
 	{
@@ -97,9 +100,9 @@ public class KSoapTester
 
 			SoapObject objectResult = (SoapObject) soapSerializationEnvelope.getResponse();
 			WMSMD_Message_Response response = new WMSMD_Message_Response();
-			for(int i=0;i<objectResult.getPropertyCount();i++){
-				response.setProperty(i, objectResult.getProperty(i));
-			}
+//			for(int i=0;i<objectResult.getPropertyCount();i++){
+//				response.setProperty(i, objectResult.getProperty(i));
+//			}
 			
 			System.out.println( response );
 			System.out.println( (String)response.getResult() );

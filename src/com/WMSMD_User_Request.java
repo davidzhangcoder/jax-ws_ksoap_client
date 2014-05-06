@@ -22,6 +22,7 @@ public class WMSMD_User_Request implements KvmSerializable
 	//fr6
 	//fr7
 	//fr8
+	//fr9
 	
 	//gr1
 	//fr1

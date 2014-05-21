@@ -14,29 +14,6 @@ public class WMSMD_User_Request implements KvmSerializable
 	private String passwd;
 	private String userName;
 	
-	//fr1
-	//fr2
-	//fr3
-	//fr4
-	//fr5
-	//fr6
-	//fr7
-	//fr8
-	//fr9
-	//fr10
-	
-	//gr1
-	//fr1
-	
-	//gr2
-	//h1-r1
-	
-	//gr3
-	//gr4
-	//fr11
-	//gr5
-	//gr6
-	//gr7
 	
 	@Override
 	public Object getProperty(int arg0) {

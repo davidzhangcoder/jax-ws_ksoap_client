@@ -23,6 +23,7 @@ public class WMSMD_User_Request implements KvmSerializable
 	//master-branch:m_b_1
 	//master-branch:m_b_2
 	//master-branch:m_b_3
+	//master-branch:m_b_4
 
 	
 	private String passwd;

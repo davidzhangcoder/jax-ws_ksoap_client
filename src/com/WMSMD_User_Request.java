@@ -11,6 +11,8 @@ public class WMSMD_User_Request implements KvmSerializable
 	private static final int INDEX_PASSWORD = 1;
 	public static Class WMSMD_USER_CLASS = WMSMD_User_Request.class;
 
+	//h2-1
+	
 	private String passwd;
 	private String userName;
 	

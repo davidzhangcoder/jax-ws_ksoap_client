@@ -15,6 +15,10 @@ public class WMSMD_User_Request implements KvmSerializable
 	//h1-1
 	//h2-2
 	
+	
+	//wp-branch:wp_b_1
+
+	
 	private String passwd;
 	private String userName;
 	

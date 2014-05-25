@@ -13,6 +13,7 @@ public class WMSMD_User_Request implements KvmSerializable
 
 	//h2-1
 	//h1-1
+	//h2-2
 	
 	private String passwd;
 	private String userName;

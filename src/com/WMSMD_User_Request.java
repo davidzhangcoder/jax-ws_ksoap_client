@@ -15,6 +15,7 @@ public class WMSMD_User_Request implements KvmSerializable
 	//h1-1
 	//h2-2
 	
+	//wp1-1
 	
 	//wp-branch:wp_b_1
 	//wp-branch:wp_b_2

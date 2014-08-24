@@ -19,6 +19,8 @@ public class WMSMD_USER_MARSHAL implements Marshal
 	//gr1
 	//fr1
 	
+	//fb-11
+	
 	
 	@Override
 	public Object readInstance(XmlPullParser parser, String arg1, String arg2,

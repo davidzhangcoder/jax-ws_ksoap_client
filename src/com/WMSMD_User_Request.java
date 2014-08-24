@@ -15,16 +15,33 @@ public class WMSMD_User_Request implements KvmSerializable
 	public static String NAMESPACE = "http://jaxws_web.com/";
 	
 
+	//h2-1
+	//h1-1
+	//h2-2
+	
+	//wp1-1
+	//wp-1
+	//wp1-2
+	//wp-2
+	//wp1-3
+	
+	//wp-branch:wp_b_1
+	//wp-branch:wp_b_2
+	//wp-branch:wp_b_3
+	//wp-branch:wp_b_4
+	//master-branch:m_b_1
+	//master-branch:m_b_2
+	//master-branch:m_b_3
+	//master-branch:m_b_4
+
+	
 	private String passwd;
 	private String userName;
 	
-	//fr1
-	//fr2
-	//fr3
-	//fr4
-	//fr5
-	//fr6
-	//fr7
+	//fb1
+	//fb2
+	//ga1
+	//ga2
 	
 	//gr1
 	//fr1
